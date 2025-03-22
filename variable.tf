@@ -27,3 +27,9 @@ variable "gcp_credentials_json" {
   type        = string
   description = "GCP service account credentials in JSON format"
 }
+
+variable "bucket_name" {
+  type        = string
+  description = "The name of the existing bucket"
+  default     = "yantra1-dev"
+}
