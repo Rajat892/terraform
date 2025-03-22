@@ -1,25 +1,25 @@
 variable "project-name" {
-    type = string
-    description = "The name of the project"
-    default = "yantra1"
+  type        = string
+  description = "The name of the project"
+  default     = "yantra1"
 }
 
 variable "regions" {
-    type = string
-    description = "The region of the project"
-    default = "us-central1"
+  type        = string
+  description = "The region of the project"
+  default     = "us-central1"
 }
 
-variable "network-module"{
+variable "network-module" {
   type = object({
-    environment_name= string
-    vpc_main = string
-    subnet = string
-    subnet_ip_cidr_range = string
-    secondary_pods_ip_range = string
+    environment_name            = string
+    vpc_main                    = string
+    subnet                      = string
+    subnet_ip_cidr_range        = string
+    secondary_pods_ip_range     = string
     secondary_services_ip_range = string
-    router = string
-    nat-name = string
+    router                      = string
+    nat-name                    = string
   })
 }
 
