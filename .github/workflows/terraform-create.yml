@@ -26,8 +26,11 @@ jobs:
           credentials_json: ${{ secrets.GOOGLE_CREDENTIALS }}
       
       - name: Terraform Init
-        run: terraform init -reconfigure
-
+        run: |
+          gcloud config set auth/impersonate_service_account terraform@yantra1.iam.gserviceaccount.com
+          gcloud auth application-default login
+          export GOOGLE_IMPERSONATE_SERVICE_ACCOUNT=terraform@yantra1.iam.gserviceaccount.com
+          terraform init
       - name: Terraform Plan
         run: terraform plan -input=false
 
