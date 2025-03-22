@@ -1,9 +1,9 @@
-# terraform {
-#     backend "gcs" { 
-#       bucket  = "terraform-state-cicdproject"
-#       prefix  = "dev"
-#     }
-# }
+terraform {
+  backend "gcs" {
+    bucket = "${var.project-name}-dev"
+    prefix = "dev"
+  }
+}
 
 # provider "google" {
 #   project     = var.project-name
