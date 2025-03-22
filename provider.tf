@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-    credentials = file("yantra1.json")
+  credentials = "${ secrets.GOOGLE_CREDENTIALS }"
   project = var.project-name
   region = "us-central1"
 }
