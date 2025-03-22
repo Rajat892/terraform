@@ -60,7 +60,7 @@ resource "google_compute_router_nat" "yantra-nat" {
 
 resource "google_compute_firewall" "ssh" {
   name                  = "${var.network-module.vpc_main}-allow-ssh"
-  network               = google_compute_network.vpc_main.name
+  network               = google_compute_network.yantra-network.name
   allow {
     protocol = "tcp"
     ports    = ["22","2812","7000","7199","7000",9042]
@@ -69,8 +69,7 @@ resource "google_compute_firewall" "ssh" {
 #   target_tags   = ["by-vpn"]
   source_ranges = ["103.109.73.26"]
   depends_on    = [
-    google_compute_subnetwork.gcp_subnet,
-    #    data.google_compute_network.vpc,
-    google_compute_network.vpc_main
+    google_compute_subnetwork.yantra-subnetwork,
+    google_compute_network.yantra-network
   ]
 }
