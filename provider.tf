@@ -8,7 +8,6 @@ terraform {
 }
 
 provider "google" {
-  credentials = "${ secrets.GOOGLE_CREDENTIALS }"
   project = var.project-name
   region = "us-central1"
 }
