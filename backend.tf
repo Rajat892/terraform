@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "${var.project-name}-dev"
+    bucket = "yantra1-dev"
     prefix = "dev"
   }
 }
