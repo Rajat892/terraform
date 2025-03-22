@@ -28,7 +28,7 @@ jobs:
       - name: Terraform Init
         run: |
           gcloud config set auth/impersonate_service_account terraform@yantra1.iam.gserviceaccount.com
-          gcloud auth application-default login
+          gcloud auth application-default login  --quiet
           export GOOGLE_IMPERSONATE_SERVICE_ACCOUNT=terraform@yantra1.iam.gserviceaccount.com
           terraform init
       - name: Terraform Plan
