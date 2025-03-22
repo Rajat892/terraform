@@ -31,4 +31,3 @@ jobs:
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
-          GOOGLE_REGION: ${{ secrets.GOOGLE_REGION }}
