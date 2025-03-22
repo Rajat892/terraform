@@ -2,7 +2,6 @@ terraform {
     backend "gcs" { 
       bucket  = "terraform-state-cicdproject"
       prefix  = "dev"
-      depends_on = [google_storage_bucket.dev]
     }
 }
 
