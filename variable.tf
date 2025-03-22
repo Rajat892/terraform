@@ -22,3 +22,8 @@ variable "network-module"{
     nat-name = string
   })
 }
+
+variable "gcp_credentials_json" {
+  type        = string
+  description = "GCP service account credentials in JSON format"
+}

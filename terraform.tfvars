@@ -10,3 +10,5 @@ network-module= {
     router = "yantra-router"
     nat-name = "yantra-nat"
 }
+
+gcp_credentials_json = "credentials.json"
