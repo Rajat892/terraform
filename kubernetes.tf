@@ -72,7 +72,7 @@ resource "google_container_cluster" "gke-cluster" {
     enable_private_endpoint = false
     enable_private_nodes    = true
     master_ipv4_cidr_block  = var.network-module.subnet_ip_cidr_range
-    private_endpoint_subnetwork = var.network-module.subnet
+    # private_endpoint_subnetwork = var.network-module.subnet
   }
 
   ip_allocation_policy {
