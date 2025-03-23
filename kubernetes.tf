@@ -5,8 +5,8 @@ data "google_container_cluster" "gke-cluster" {
     name = var.gke_cluster_name
     location = var.zone
     depends_on = [
-        google_compute_address.yantra-address.name,
-        google_compute_subnetwork.yantra-subnet.name,
+        google_compute_address.yantra-address,
+        google_compute_subnetwork.yantra-subnetwork,
         google_container_cluster.gke-cluster
     ]
 }
