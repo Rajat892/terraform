@@ -15,6 +15,15 @@ resource "google_compute_subnetwork" "yantra-subnetwork" {
   depends_on = [
     google_compute_network.yantra-network
   ]
+  secondary_ip_range {
+    range_name    = "private-pods"
+    ip_cidr_range = var.network-module.secondary_pods_ip_range
+  }
+
+  secondary_ip_range {
+    range_name    = "private-services"
+    ip_cidr_range = var.network-module.secondary_services_ip_range
+  }
 
 }
 
@@ -77,3 +86,4 @@ resource "google_compute_firewall" "ssh" {
     google_compute_network.yantra-network
   ]
 }
+
