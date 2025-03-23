@@ -20,7 +20,6 @@ data "google_compute_network" "vpc_main" {
 
 data "google_compute_subnetwork" "subnet" {
     name = var.network-module.subnet
-    network = "${google_compute_network.yantra-network.name}"
     depends_on = [
         google_compute_network.yantra-network
     ]
