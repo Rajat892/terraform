@@ -17,6 +17,6 @@ gke_cluster_name = "yantra-cluster"
 zone = "us-central1-a"
 node_version = "1.31.6-gke.1020000"
 min_master_version = "1.31.6-gke.1020000"
-master-authorized-network-config = ["103.109.73.26"]
+master-authorized-network-config = ["103.109.73.26/32"]
 project-id = "yantra1"
 gke-cluster-name = "yantra-cluster"
