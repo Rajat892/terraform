@@ -18,7 +18,7 @@ zone = "us-central1-a"
 node_version = "1.31.6-gke.1020000"
 min_master_version = "1.31.6-gke.1020000"
 master-authorized-network-config = [{
-  cidr_blocks = "103.109.73.26"
+  cidr_block = "103.109.73.26/32"
   display_name = "yantra-authorized-network"
 }]
 project-id = "yantra1"
