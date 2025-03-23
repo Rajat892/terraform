@@ -12,7 +12,7 @@ network-module = {
 }
 
 gcp_credentials_json = "credentials.json"
-master_ipv4_cidr_block = "10.0.0.0/24"
+master_ipv4_cidr_block = "10.0.0.0/28"
 gke_cluster_name = "yantra-cluster"
 zone = "us-central1-a"
 node_version = "1.31.6-gke.1020000"
