@@ -38,6 +38,7 @@ provider "kubernetes" {
 resource "google_container_cluster" "gke-cluster" {
   name                     = var.gke_cluster_name
   location                 = var.zone
+  deletion_protection      = false
   remove_default_node_pool = false
   initial_node_count       = 1
   node_version             = var.node_version
