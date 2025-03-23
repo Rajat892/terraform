@@ -5,8 +5,8 @@ data "google_container_cluster" "gke-cluster" {
     name = var.gke_cluster_name
     location = var.zone
     depends_on = [
-        var.network-module.vpc_main,
-        var.network-module.subnet,
+        google_compute_address.yantra-address.name,
+        google_compute_subnetwork.yantra-subnet.name,
         google_container_cluster.gke-cluster
     ]
 }
@@ -19,7 +19,7 @@ data "google_compute_subnetwork" "subnet" {
     name = var.network-module.subnet
     network = "${data.google_compute_network.vpc_main.id}"
     depends_on = [
-        google_compute_network.yantra-network.id
+        google_compute_network.yantra-network
     ]
 }
 
@@ -85,8 +85,8 @@ resource "google_container_cluster" "gke-cluster" {
 	
   
     depends_on = [
-	google_compute_network.yantra-network.id,
-	google_compute_subnetwork.yantra-subnet.id
+	google_compute_network.yantra-network,
+	google_compute_subnetwork.yantra-subnet
 	
   ]  
   
