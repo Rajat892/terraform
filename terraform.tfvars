@@ -4,9 +4,9 @@ network-module = {
   environment_name            = "dev"
   vpc_main                    = "yantra-network"
   subnet                      = "yantra-subnet"
-  subnet_ip_cidr_range        = "10.0.0.0/16"
-  secondary_pods_ip_range     = "10.0.1.0/16"
-  secondary_services_ip_range = "10.0.2.0/16"
+  subnet_ip_cidr_range        = "10.0.0.0/24"
+  secondary_pods_ip_range     = "10.0.1.0/24"
+  secondary_services_ip_range = "10.0.2.0/24"
   router                      = "yantra-router"
   nat-name                    = "yantra-nat"
 }
