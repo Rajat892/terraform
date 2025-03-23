@@ -33,3 +33,45 @@ variable "bucket_name" {
   description = "The name of the existing bucket"
   default     = "yantra1-dev"
 }
+
+#----------------------------------
+
+variable "gke_cluster_name" {
+  type        = string
+  description = "The name of the GKE cluster"
+}
+
+variable "zone" {
+  type        = string
+  description = "The zone of the GKE cluster"
+}
+
+variable "node_version" {
+  type        = string
+  description = "The version of the node"
+}
+
+variable "min_master_version" {
+  type        = string
+  description = "The minimum version of the master"
+}
+
+variable "master-authorized-network-config" {
+  type        = list(map(string))
+  description = "The master authorized network config"
+}
+
+variable "project-id" {
+  type        = string
+  description = "The project id"
+}
+
+variable "gke-cluster-name" {
+  type        = string
+  description = "The name of the GKE cluster"
+}
+
+variable "master_ipv4_cidr_block" {
+  type        = string
+  description = "The master ipv4 cidr block"
+}
