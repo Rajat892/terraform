@@ -1,0 +1,8 @@
+# backend.tf.tmpl
+terraform {
+  backend "gcs" {
+    bucket      = "backends-dev-tf"
+    prefix      = "terraform/state"
+    credentials = "gcp-key.json"
+  }
+}
